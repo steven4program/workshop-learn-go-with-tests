@@ -1,1 +1,1 @@
-# Go
+# Workshop code of Learn Go with tests

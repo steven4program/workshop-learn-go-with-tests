@@ -39,6 +39,15 @@ func BenchmarkRepeat3(b *testing.B) {
 	}
 }
 
+func TestRepeat5(t *testing.T) {
+	repeated := Repeat5("a")
+	expected := "aaaaa"
+
+	if repeated != expected {
+		t.Errorf("expected %q but got %q", expected, repeated)
+	}
+}
+
 func BenchmarkRepeat5(b *testing.B) {
 	for b.Loop() {
 		Repeat5("a")

@@ -1,6 +1,8 @@
 // Package iteration a
 package iteration
 
+import "strings"
+
 // 講稿
 // 1. return ""
 // 2. c type for 1 ~ 5
@@ -14,17 +16,35 @@ package iteration
 
 // Repeat1 c type for
 func Repeat1(character string) string {
-	return ""
+	var repeated string
+	for i := 0; i < 5; i++ {
+		repeated += character
+	}
+	return repeated
 }
 
 // Repeat2 while 寫法
 func Repeat2(character string) string {
-	return ""
+	var repeated string
+
+	i := 0
+
+	for i < 5 {
+		repeated += character
+		i++
+	}
+	return repeated
 }
 
 // Repeat3 range 寫法
 func Repeat3(character string) string {
-	return ""
+	var repeated string
+
+	for range 5 {
+		repeated += character
+	}
+
+	return repeated
 }
 
 // Repeat4 forever
@@ -42,10 +62,22 @@ func Repeat3(character string) string {
 
 // Repeat5 用 string builder
 func Repeat5(character string) string {
-	return ""
+	var b strings.Builder
+
+	for range 5 {
+		b.WriteString(character)
+
+	}
+	return b.String()
 }
 
 // Repeat6 Change the test so a caller can specify how many times the character is repeated and then fix the code
 func Repeat6(character string, repeatTimes int) string {
-	return ""
+		var b strings.Builder
+
+	for range repeatTimes {
+		b.WriteString(character)
+
+	}
+	return b.String()
 }

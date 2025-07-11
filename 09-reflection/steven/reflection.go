@@ -7,7 +7,7 @@ func walk(x interface{}, fn func(input string)) {
 
 	// 使用 walkValue 函式，讓 switch 裡的遞迴呼叫更乾淨、更少重複。
 	walkValue := func(value reflect.Value) {
-		walk(value.Interface(), fn) // interfacte() 取出實體
+		walk(value.Interface(), fn) // interface() 取出實體
 	}
 
 	switch val.Kind() {

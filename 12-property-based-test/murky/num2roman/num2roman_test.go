@@ -5,7 +5,7 @@ import (
 	"testing"
 	"testing/quick"
 
-	v5 "github.com/Tech-Book-Community/workshop-learn-go-with-tests/12-property-base-test/murky/roman2number"
+	v5 "github.com/Tech-Book-Community/workshop-learn-go-with-tests/12-property-based-test/murky/roman2number"
 )
 
 func TestRomanNumerals(t *testing.T) {
